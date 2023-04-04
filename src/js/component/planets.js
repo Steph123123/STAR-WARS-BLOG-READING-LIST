@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
-export const People = () => {
+export const Planets = () => {
   const { actions, store } = useContext(Context);
   return (
     <div className="d-flex flex-nowrap overflow-auto">
-      {store.people.map((value) => {
+      {store.planets.map((value) => {
         return (
           <div className="card mx-2" style={{ minWidth: "18rem" }} key={value.name}>
             <img
