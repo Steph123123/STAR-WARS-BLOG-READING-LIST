@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+
 
 export const Planets = () => {
   const { actions, store } = useContext(Context);
@@ -16,9 +18,9 @@ export const Planets = () => {
             <div className="card-body">
               <h5 className="card-title">{value.name}</h5>
             </div>
-            <a href="#" className="btn btn-primary">
+            <Link to={"/singleplanet/"+ value.uid} className="btn btn-primary">
               Go somewhere
-            </a>
+            </Link>
           </div>
         );
       })}

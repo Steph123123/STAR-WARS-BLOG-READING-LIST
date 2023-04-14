@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Vehicles = () => {
   const { actions, store } = useContext(Context);
@@ -16,9 +17,9 @@ export const Vehicles = () => {
             <div className="card-body">
               <h5 className="card-title">{value.name}</h5>
             </div>
-            <a href="#" className="btn btn-primary">
+            <Link to={"/singlevehicle/"+ value.uid} className="btn btn-primary">
               Go somewhere
-            </a>
+            </Link>
           </div>
         );
       })}
