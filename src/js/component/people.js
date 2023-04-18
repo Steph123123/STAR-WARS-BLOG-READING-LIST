@@ -17,9 +17,12 @@ export const People = () => {
             <div className="card-body">
               <h5 className="card-title">{value.name}</h5>
             </div>
+            <div className="d-flex justify-content-between p-2">
             <Link to={"/single/"+ value.uid} className="btn btn-primary">
               Go somewhere
             </Link>
+            <button type="button" className="btn btn-light" onClick={()=>{actions.favorites(value.name)}}><i className="far fa-heart" style={{color: "#ffd43b"}}></i></button>
+            </div>
           </div>
         );
       })}
